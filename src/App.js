@@ -1,13 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Local from './page/Local';
-
-
+import Lista from './components/Lista';
 
 function App() {
   return (
     <div className="App">
-      <Local/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
+      <Lista/>
     </div>
   );
 }
