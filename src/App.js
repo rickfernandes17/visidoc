@@ -1,17 +1,11 @@
 import './App.css';
-import Lista from './components/Lista';
+import Local from './page/Local';
+
 
 function App() {
   return (
     <div className="App">
-      <Lista/>
-      <Lista/>
-      <Lista/>
-      <Lista/>
-      <Lista/>
-      <Lista/>
-      <Lista/>
-      <Lista/>
+      <Local/>
     </div>
   );
 }
