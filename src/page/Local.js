@@ -13,29 +13,30 @@
   ```
 */
 import { useState, useEffect } from "react"
-import ButtonSubimit from "../components/ButttonSubmit"
-import InputFile from "../components/InputFile"
-import InputText from "../components/InputText"
+import ButtonSubimit from "../components/Form/Button/ButttonSubmit"
+import GaleriaImagem from "../components/GaleriaImagem"
+import InputFile from "../components/Form/Input/InputFile"
+import InputText from "../components/Form/Input/InputText"
 
 export default function Local() {
     const [cep, setCep] = useState([])
 
-    // useEffect(() => {
-    //     fetch("https://viacep.com.br/ws/16905020/json/", {
-    //         method: "GET",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         }
-    //     })
-    //         .then((resp) => resp.json())
-    //         .then((data) => {
-    //             setCep(data)
-    //         })
-    //         .catch((err) => console.log(err))
-    // }, [])
+    useEffect(() => {
+        fetch("https://viacep.com.br/ws/16905020/json/", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then((resp) => resp.json())
+            .then((data) => {
+                setCep(data)
+            })
+            .catch((err) => console.log(err))
+    }, [])
 
     return (
-        <>
+        <div className="w-full">
             <div className="mt-5 md:col-span-2 md:mt-0">
                 <form action="#" method="POST">
                     <div className="overflow-hidden shadow sm:rounded-md">
@@ -57,6 +58,7 @@ export default function Local() {
                     </div>
                 </form>
             </div>
-        </>
+            <GaleriaImagem/>
+        </div>
     )
 }

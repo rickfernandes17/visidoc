@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 function Lista() {
     return (
         <div class="flex flex- hover:shadow-xl border-y m-2 border-l-4 border-l-cyan-500">
@@ -10,7 +11,7 @@ function Lista() {
             rounded-tr
             rounded-br
             ">
-                <a href="#">Acessar</a></div>
+                <Link to="/usuario/1">Acessar</Link></div>
         </div>
     )
 }

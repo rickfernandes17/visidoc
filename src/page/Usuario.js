@@ -1,7 +1,7 @@
 import ButtonSubimit from "../components/Form/Button/ButttonSubmit";
-import InputLogotipo from "../components/Form/Input/InputLogotipo";
 import InputText from "../components/Form/Input/InputText";
-import TextArea from "../components/Form/Input/TextArea";
+import { useParams } from 'react-router-dom';
+
 
 /*
   This example requires some changes to your config:
@@ -17,29 +17,27 @@ import TextArea from "../components/Form/Input/TextArea";
   }
   ```
 */
-export default function Layout() {
+export default function Usuario() {
+    const { id } = useParams();
+
     return (
         <>
-            <div className="mt-5 md:col-span-2 md:mt-0">
+            <div className="">
+                
                 <form action="#" method="POST">
                     <div className="overflow-hidden shadow sm:rounded-md">
                         <div className="bg-white px-4 py-5 sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
-                                {/* Input Nome Cabeçalho */}
 
-                                <InputText label="Nome do Cabeçalho" nome="cabecalho" />
+                                <InputText label="Nome" nome="nome" />
                                 
-                                <InputText label="Titulo" nome="titulo" />
+                                <InputText label="E-mail" nome="email" />
 
-                                <InputLogotipo/>
-
-                                <TextArea nome="conteudo" label="Corpo Conteudo"/>
-
-                                <InputText label="Rodapé" nome="rodape"/>
+                                <InputText label="Telefone" nome="telefone" />
 
                             </div>
                         </div>
-                        <ButtonSubimit/>
+                        <ButtonSubimit />
                     </div>
                 </form>
             </div>
